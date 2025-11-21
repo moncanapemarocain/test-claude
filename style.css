@@ -1,0 +1,303 @@
+/* ============================================
+   STYLE MODERNE POUR GÉNÉRATEUR DE DEVIS CANAPÉS
+   ============================================ */
+
+/* VARIABLES DE COULEURS - Palette moderne */
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary-color: #ec4899;
+    --background-gradient-start: #f8fafc;
+    --background-gradient-end: #e0e7ff;
+    --card-background: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --shadow-color: rgba(99, 102, 241, 0.1);
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+}
+
+/* FOND GÉNÉRAL */
+.stApp {
+    background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+}
+
+/* EN-TÊTE PRINCIPAL */
+h1 {
+    color: var(--primary-color) !important;
+    font-weight: 800 !important;
+    font-size: 3rem !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+/* SOUS-TITRES */
+h2, h3 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* CARTES DE CONTENU */
+.element-container, .stColumn {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* INPUTS ET SELECTBOX - Style moderne */
+.stSelectbox, .stNumberInput, .stTextInput {
+    margin-bottom: 1rem;
+}
+
+.stSelectbox > div > div,
+.stNumberInput > div > div > input,
+.stTextInput > div > div > input {
+    background-color: var(--card-background) !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 1px 3px var(--shadow-color) !important;
+}
+
+.stSelectbox > div > div:hover,
+.stNumberInput > div > div > input:hover,
+.stTextInput > div > div > input:hover {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 4px 12px var(--shadow-color) !important;
+    transform: translateY(-2px);
+}
+
+.stSelectbox > div > div:focus-within,
+.stNumberInput > div > div > input:focus,
+.stTextInput > div > div > input:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* CHECKBOXES - Style personnalisé */
+.stCheckbox {
+    margin-bottom: 0.5rem;
+}
+
+.stCheckbox > label {
+    background-color: var(--card-background) !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 10px !important;
+    border: 2px solid var(--border-color) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.stCheckbox > label:hover {
+    border-color: var(--primary-color) !important;
+    background-color: rgba(99, 102, 241, 0.05) !important;
+    transform: translateX(5px);
+}
+
+/* BOUTONS - Design moderne avec dégradé */
+.stButton > button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 2rem !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
+    text-transform: uppercase !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(-1px) !important;
+}
+
+/* BOUTON DOWNLOAD */
+.stDownloadButton > button {
+    background: linear-gradient(135deg, var(--success-color) 0%, #059669 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stDownloadButton > button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* METRICS - Cartes de statistiques */
+.stMetric {
+    background: var(--card-background) !important;
+    padding: 1.5rem !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 15px var(--shadow-color) !important;
+    border: 2px solid var(--border-color) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stMetric:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px var(--shadow-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.stMetric label {
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+.stMetric [data-testid="stMetricValue"] {
+    color: var(--primary-color) !important;
+    font-weight: 800 !important;
+    font-size: 2rem !important;
+}
+
+/* MESSAGES D'ALERTE */
+.stAlert {
+    border-radius: 12px !important;
+    border: none !important;
+    padding: 1rem 1.5rem !important;
+    animation: slideInRight 0.5s ease-out;
+}
+
+.stSuccess {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.2) 100%) !important;
+    border-left: 4px solid var(--success-color) !important;
+}
+
+.stError {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.2) 100%) !important;
+    border-left: 4px solid #ef4444 !important;
+}
+
+.stWarning {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.2) 100%) !important;
+    border-left: 4px solid var(--warning-color) !important;
+}
+
+/* SPINNER DE CHARGEMENT */
+.stSpinner > div {
+    border-top-color: var(--primary-color) !important;
+}
+
+/* SÉPARATEURS */
+hr {
+    margin: 2rem 0 !important;
+    border: none !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent) !important;
+    opacity: 0.3 !important;
+}
+
+/* CONTENEURS DE COLONNES */
+.stColumn {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+/* GRAPHIQUE MATPLOTLIB */
+.stPlotlyChart, .element-container:has(> .stImage) {
+    background: var(--card-background) !important;
+    padding: 2rem !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px var(--shadow-color) !important;
+    border: 2px solid var(--border-color) !important;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* SCROLLBAR PERSONNALISÉE */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-gradient-start);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    .stColumn {
+        padding: 1rem;
+    }
+}

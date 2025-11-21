@@ -1,0 +1,16 @@
+[theme]
+# Thème personnalisé pour l'application
+primaryColor="#6366f1"
+backgroundColor="#f8fafc"
+secondaryBackgroundColor="#ffffff"
+textColor="#1e293b"
+font="sans serif"
+
+[server]
+# Configuration du serveur
+headless = true
+port = 8501
+
+[browser]
+# Configuration du navigateur
+gatherUsageStats = false
